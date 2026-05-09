@@ -30,11 +30,10 @@ The system now enforces stronger password requirements:
 - At least one number
 - Blocks common weak passwords
 
-## Persistent Storage
+## 💾 Persistent Storage
 
 User accounts are saved to a JSON file and automatically loaded when the application starts.
-- 
-- 
+
 ##  Attack Demonstration
 
 This project includes a dictionary attack that attempts to crack stored password hashes using a list of common passwords.

@@ -20,7 +20,21 @@ The system is then improved by introducing salting, showing how this simple defe
 * Salted password storage for improved security
 
 ---
+## Password Validation
 
+The system now enforces stronger password requirements:
+
+- Minimum 8 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one number
+- Blocks common weak passwords
+
+## Persistent Storage
+
+User accounts are saved to a JSON file and automatically loaded when the application starts.
+- 
+- 
 ##  Attack Demonstration
 
 This project includes a dictionary attack that attempts to crack stored password hashes using a list of common passwords.

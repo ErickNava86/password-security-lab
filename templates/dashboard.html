@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Cracker Dashboard</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Dashboard</h1>
+
+        <h2>Welcome {{ username }}</h2>
+
+        <p>You are successfully logged in.</p>
+
+        <br>
+
+        <a href="/logout" class="logout-btn">Logout</a>
+
+    </div>
+
+</body>
+
+</html>

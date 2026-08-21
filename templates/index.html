@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Code Cracker</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+    <h1>Code Cracker Login System</h1>
+
+    <form action="/login" method="POST">
+
+        <label>Username:</label>
+        <input type="text" name="username">
+
+        <label>Password:</label>
+        <input type="password" name="password">
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p class="message">{{ message }}</p>
+
+    <a href="/register">Register User</a>
+
+</div>
+
+</body>
+
+</html>

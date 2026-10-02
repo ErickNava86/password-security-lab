@@ -1,42 +1,85 @@
-body {
-    font-family: Arial, sans-serif;
+/* ----- GLOBAL ----- */
 
-    background-color: #ececec;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    min-height: 100vh;
+    padding: 24px;
 
-    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #202020 0%, #121212 38%, #090909 100%);
+
+    color: #e8e8e8;
+}
+
+
+/* ----- MAIN CARD ----- */
+
+.container {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 38px;
+
+    background-color: #151515;
+
+    border: 1px solid #2d2d2d;
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+
+h1,
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    color: #f5f5f5;
+}
+
+h2 {
+    margin-bottom: 16px;
+
+    font-size: 19px;
+    font-weight: 500;
+
+    color: #bdbdbd;
 }
 
 p {
     text-align: center;
+
+    line-height: 1.6;
+
+    color: #a8a8a8;
 }
 
-.container {
-    width: 400px;
 
-    padding: 30px;
-
-    background-color: white;
-
-    border-radius: 10px;
-
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-h2 {
-    text-align: center;
-    color: #333
-}
+/* ----- FORM ----- */
 
 form {
     width: 100%;
@@ -44,76 +87,174 @@ form {
 
 label {
     display: block;
-    text-align: left;
-    margin-bottom: 5px;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #b8b8b8;
 }
 
 input {
     width: 100%;
-    padding: 10px;
 
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    padding: 12px 13px;
 
-    box-sizing: border-box;
+    border: 1px solid #343434;
+    border-radius: 6px;
+
+    background-color: #0e0e0e;
+
+    color: #f2f2f2;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+input:focus {
+    border-color: #777;
+
+    background-color: #111;
+
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.04);
+}
+
+
+/* ----- BUTTON ----- */
 
 button {
     width: 100%;
 
-    padding: 10px;
+    margin-top: 4px;
+    padding: 12px;
 
-    border: none;
+    border: 1px solid #444;
+    border-radius: 6px;
 
-    border-radius: 5px;
+    background-color: #e2e2e2;
 
-    background-color: #007bff;
-    color: white;
+    color: #111;
+
+    font-size: 15px;
+    font-weight: 700;
 
     cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.1s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ffffff;
+
+    border-color: #666;
 }
 
-.message {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 15px;
+button:active {
+    transform: translateY(1px);
 }
+
+
+/* ----- STATUS MESSAGE ----- */
+
+.message {
+    min-height: 20px;
+
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #c7c7c7;
+}
+
+
+/* ----- LINKS ----- */
 
 a {
     display: block;
 
+    margin-top: 20px;
+
     text-align: center;
-
-    margin-top: 15px;
-
     text-decoration: none;
 
-    color: #007bff;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #bdbdbd;
+
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #ffffff;
 }
 
-.logout-btn {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
 
-    background-color: #1a73e8;
-    color: white;
+/* ----- DASHBOARD ----- */
+
+.logout-btn {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 24px;
+    padding: 12px;
+
+    border: 1px solid #3d3d3d;
+    border-radius: 6px;
+
+    background-color: #1c1c1c;
+
+    color: #e8e8e8;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-align: center;
     text-decoration: none;
 
-    border-radius: 5px;
-
-    font-size: 16px;
-    font-weight: bold;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .logout-btn:hover {
-    background-color: #1557b0;
+    background-color: #252525;
+
+    border-color: #555;
+
+    color: #ffffff;
+}
+
+
+/* ----- RESPONSIVE ----- */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 28px 22px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }

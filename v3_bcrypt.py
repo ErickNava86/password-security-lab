@@ -165,8 +165,8 @@ def load_users():
 
 
 users = load_users()
-get_menu_input(users)
-
+if __name__ == "__main__":
+    menu_input(users)
 
 
 
